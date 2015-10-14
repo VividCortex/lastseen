@@ -1,7 +1,7 @@
 package lastseen
 
-// GetPrimesFrom returns up to count primes >= from.
-func GetPrimesFrom(from uint16, count int) []uint16 {
+// getPrimesFrom returns up to count primes >= from.
+func getPrimesFrom(from uint16, count int) []uint16 {
 	if count == 0 {
 		return nil
 	}

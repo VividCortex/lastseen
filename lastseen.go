@@ -25,7 +25,7 @@ func NewSketch(N int) Sketch {
 	sk := Sketch{}
 	if primeFloor := math.Ceil(float64(N*multiplier) / numBuckets); primeFloor > 0 &&
 		primeFloor < math.MaxUint16 {
-		for i, prime := range GetPrimesFrom(uint16(primeFloor), numBuckets) {
+		for i, prime := range getPrimesFrom(uint16(primeFloor), numBuckets) {
 			sk[i] = make([]time.Time, prime)
 		}
 	}
